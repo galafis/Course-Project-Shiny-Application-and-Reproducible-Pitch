@@ -1,0 +1,115 @@
+---
+title: "BMI Calculator and Health Visualizer"
+author: "Gabriel Demetrios Lafis"
+date: "May 28, 2025"
+output: 
+  ioslides_presentation:
+    css: styles.css
+    logo: images/bmi_logo.png
+    widescreen: true
+    smaller: true
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+library(ggplot2)
+```
+
+## BMI Calculator and Health Visualizer
+
+### An Interactive Shiny Application
+
+- Calculates Body Mass Index (BMI) based on user input
+- Provides personalized health recommendations
+- Visualizes BMI in relation to health standards
+- Projects potential BMI changes over time
+
+## How It Works
+
+The application uses the standard BMI formula:
+
+$$BMI = \frac{weight (kg)}{height (m)^2}$$
+
+```{r, echo=TRUE}
+# Sample BMI calculation
+height_m <- 1.75  # height in meters
+weight_kg <- 70   # weight in kilograms
+bmi <- weight_kg / (height_m^2)
+cat("BMI for a person who is 1.75m tall and weighs 70kg:", round(bmi, 1))
+```
+
+## Interactive Features
+
+The application includes:
+
+1. **User Input Widgets**
+   - Height and weight numeric inputs
+   - Age slider
+   - Gender selection
+   
+2. **Reactive Calculations**
+   - BMI calculation based on user input
+   - Health category determination
+   - Personalized recommendations
+
+3. **Dynamic Visualizations**
+   - BMI gauge with health categories
+   - Population comparison
+   - Future BMI projections
+
+## Visualizations
+
+```{r, echo=FALSE, fig.height=4, fig.width=8}
+# Create sample BMI gauge visualization
+bmi <- 24.5  # Example BMI
+
+# Create gauge plot
+ggplot() +
+  geom_rect(data = data.frame(
+    xmin = c(0, 18.5, 25, 30),
+    xmax = c(18.5, 25, 30, 40),
+    ymin = c(-0.5, -0.5, -0.5, -0.5),
+    ymax = c(0.5, 0.5, 0.5, 0.5),
+    fill = c("#fff3cd", "#d4edda", "#f8d7da", "#f1b0b7")
+  ), aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = fill), alpha = 0.7) +
+  scale_fill_identity() +
+  geom_text(data = data.frame(
+    x = c(9.25, 21.75, 27.5, 35),
+    y = c(0, 0, 0, 0),
+    label = c("Underweight", "Normal", "Overweight", "Obese")
+  ), aes(x = x, y = y, label = label), size = 4) +
+  geom_segment(aes(x = bmi, y = -0.7, xend = bmi, yend = 0.7), 
+              color = "#2c3e50", size = 1.5, arrow = arrow(length = unit(0.5, "cm"))) +
+  geom_text(aes(x = bmi, y = -0.9, label = paste("Example BMI:", round(bmi, 1))),
+           color = "#2c3e50", size = 5, fontface = "bold") +
+  scale_x_continuous(limits = c(0, 40), breaks = c(0, 18.5, 25, 30, 40)) +
+  scale_y_continuous(limits = c(-1, 1)) +
+  theme_minimal() +
+  theme(
+    axis.title = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  ) +
+  labs(title = "BMI Scale")
+```
+
+## Try It Yourself
+
+### Access the Application
+
+- Visit: [https://github.com/galafis/BMI-Calculator-Shiny](https://github.com/galafis/BMI-Calculator-Shiny)
+- Run the application locally or access it on shinyapps.io
+
+### Features to Explore
+
+- Calculate your own BMI
+- View personalized health recommendations
+- Explore different weight change scenarios
+- Compare your BMI to population distributions
+
+Thank you for your attention!
