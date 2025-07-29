@@ -121,3 +121,23 @@ Created by Gabriel Demetrios Lafis on May 28, 2025.
 ---
 
 **Note**: This BMI calculator is for educational purposes only and should not replace professional medical advice.
+
+
+## 📋 Descrição
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📦 Instalação
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 💻 Uso
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📄 Licença
+
+Descreva aqui o conteúdo desta seção.
