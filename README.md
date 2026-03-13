@@ -6,6 +6,7 @@
 [![Shiny](https://img.shields.io/badge/Shiny-1.x-blue?style=flat-square&logo=rstudio&logoColor=white)](https://shiny.posit.co/)
 [![ggplot2](https://img.shields.io/badge/ggplot2-3.x-green?style=flat-square)](https://ggplot2.tidyverse.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker)](Dockerfile)
 
 ---
 
