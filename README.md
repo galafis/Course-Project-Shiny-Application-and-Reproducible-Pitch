@@ -2,11 +2,13 @@
 
 ![BMI Calculator Preview](images/bmi_preview.png)
 
-[![R](https://img.shields.io/badge/R-4.x-276DC3?style=flat-square&logo=r&logoColor=white)](https://www.r-project.org/)
-[![Shiny](https://img.shields.io/badge/Shiny-1.x-blue?style=flat-square&logo=rstudio&logoColor=white)](https://shiny.posit.co/)
-[![ggplot2](https://img.shields.io/badge/ggplot2-3.x-green?style=flat-square)](https://ggplot2.tidyverse.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker)](Dockerfile)
+![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![Shiny](https://img.shields.io/badge/Shiny-525252?style=for-the-badge&logo=rstudio&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![License-MIT](https://img.shields.io/badge/License--MIT-yellow?style=for-the-badge)
+
 
 ---
 
